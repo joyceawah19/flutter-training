@@ -1,3 +1,4 @@
+import "dart:ffi";
 import "dart:io";
 
 double numInput() {
@@ -17,7 +18,17 @@ void main() {
   double num2 = 55;
   String choice = '+';
 
-  calculator(num1: num1, num2: num2, choice: choice);
+  //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          anamale = Animals(name: 'bingo', numberLegs: 4, sound: 'wuff');
+  // anamale.printName();
+  // print(anamale.numberLegs);
+
+  final dog = Dog(eatsMeat: true);
+  dog.name = 'bingo';
+  dog.printName();
+  final cat = Cat();
+  cat.name = 'mario';
+  cat.printName();
+  // calculator(num1: num1, num2: num2, choice: choice);
 }
 
 double add({required double n1, required double n2}) {
@@ -27,7 +38,7 @@ double add({required double n1, required double n2}) {
 calculator({num1, num2, choice}) {
   double answer = 0.0;
   if (choice == "+") {
-    answer = add(n2: 4, n1: 3);
+    answer = add(n2: num1, n1: num2);
   } else if (choice == "-") {
     answer = num1 - num2;
   } else if (choice == "*") {
@@ -42,3 +53,25 @@ calculator({num1, num2, choice}) {
 
   print("${num1} ${choice} ${num2} = ${answer}");
 }
+
+Map dog = {'name': 'bingo', 'numberLeg ': '4', 'sound': "wuff!!!"};
+Map cal = {'name': 'catty', 'numberLegs ': '4', 'sound': "muan!!!"};
+
+abstract class Animals {
+  String? name;
+  int? numberLegs;
+  String? sound;
+  Animals({this.name, this.numberLegs, this.sound});
+  void printName() {
+    print(name);
+  }
+}
+
+class Dog extends Animals {
+  bool? eatsMeat;
+  Dog({this.eatsMeat});
+}
+
+class Fowl extends Animals {}
+
+class Cat extends Animals {}
