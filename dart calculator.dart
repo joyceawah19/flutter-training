@@ -1,4 +1,4 @@
-import "dart:ffi";
+//import "dart:ffi";
 import "dart:io";
 
 double numInput() {
@@ -14,10 +14,11 @@ String operandChoice() {
 }
 
 void main() {
+  // ignore: unused_local_variable
   double num1 = 6;
+  // ignore: unused_local_variable
   double num2 = 55;
   String choice = '+';
-
   //                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          anamale = Animals(name: 'bingo', numberLegs: 4, sound: 'wuff');
   // anamale.printName();
   // print(anamale.numberLegs);
@@ -28,7 +29,7 @@ void main() {
   final cat = Cat();
   cat.name = 'mario';
   cat.printName();
-  // calculator(num1: num1, num2: num2, choice: choice);
+  //calculator(num1: num1, num2: num2, choice: choice);
 }
 
 double add({required double n1, required double n2}) {
@@ -50,7 +51,6 @@ calculator({num1, num2, choice}) {
   } else {
     print('invalid input please enter valid operant');
   }
-
   print("${num1} ${choice} ${num2} = ${answer}");
 }
 
