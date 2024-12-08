@@ -8,8 +8,7 @@ void main() {
   if (phoneNumber.length != 9) {
     print("the number must be a 9 digit number");
 
-    //if (phoneNumber.length != 2) {
-    String prefix = phoneNumber.substring(0, 2);
+    String prefix = phoneNumber.substring(0, 3);
     if (prefix == "67" ||
         prefix == "650 " ||
         prefix == "651" ||
